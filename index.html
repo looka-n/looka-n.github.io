@@ -1,161 +1,43 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/x-icon" href="assets\websiteIcon.ico">
-
-    <style>
-        /* vignette effect */
-        .vignette-shadow-ex {
-            box-shadow: inset 0 0 150px black;
-        }
-        @keyframes typing {
-            from {
-                width: 0
-            }
-
-            to {
-                width: 100%
-            }
-        }
-        @keyframes blink-caret {
-            from, to {
-                border-color: transparent
-            }
-
-            50% {
-                border-color: #ffff;
-            }
-        }
-
-        /* social media link fade-ins */
-        .social-media-link {
-            width: 500px;
-            opacity: .1;
-            transition: 0.3s;
-        }
-        .social-media-link:hover {
-            opacity: .5;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Nguyen | Portfolio</title>
+  <link href="styles.css" rel="stylesheet">
 </head>
- 
 <body>
-    <link href="files\styles.css" rel="stylesheet">
-    <script src="files\scripts.js"></script>
 
-    <!-- navigation bar -->
-    <div class="navbar">
+  <!-- <img src="https://leetcard.jacoblin.cool/nguyenlucasv" alt="Leetcode Stats"> -->
+  <div class="navbar">
+    <ul>
+      <li><a href="#"></a>Home</li>
+      <li><a href="#"></a></li>
+    </ul>
+  </div>
 
-        <!-- home -->
-        <a href="index.html">Home</a>
+  <div class="intro">
+    <h2>
+      Hey, I'm Looka
+    </h2>
+    <h3>
+      and welcome to my portfolio.
+    </h3>
+  </div>
 
-        <!--art-->
-        <a href="pages\drawing.html">Art</a>
+  <div class="links">
+    <ul>
+      <a href="https://github.com/looka-n" target="_blank">
+        <img src="assets\index\github_logo.png" class="linkimg">
+      </a>
+      <a href="https://www.linkedin.com/in/nguyenlucas" target="_blank">
+        <img src="assets\index\linkedin_logo.png" class="linkimg">
+      </a>
+      <a>
+        <img src="assets\index\test.jpg" class="linkimg">
+      </a>
+    </ul>
+  </div>
 
-        <!--editing-->
-        <div class="dropdown">
-            <button class="dropbtn">
-                Editing
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">Photoshop</a>
-                <a href="#">VFX</a>
-            </div>
-        </div>
-
-        <!--photography-->
-        <a href="#">Photography</a>
-
-        <!--music-->
-        <div class="dropdown">
-            <button class="dropbtn">
-                Music
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">Guitar</a>
-                <a href="#">Piano</a>
-            </div>
-        </div>
-
-        <!--gaming-->
-        <div class="dropdown">
-            <button class="dropbtn">
-                Gaming
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#">League of Legends</a>
-                <a href="#">Valorant</a>
-                <a href="#">CS:GO</a>
-                <a href="pages\mc.html">Minecraft</a>
-            </div>
-        </div>
-
-        <!--cs projects-->
-        <a href="pages\code.html">CS Projects</a>
-
-        <!-- changelog -->
-        <a href="pages\change.html" style="margin-left: 142vh">changelog</a>
-    </div>
-
-    <!-- title -->
-    <div class="parallax vignette-shadow-ex fade-in" style="background-image: url(https://preview.redd.it/deep-forest-with-wooden-stairs-3840x2160-v0-bee7y2b95ov91.png?auto=webp&s=34236a78fe3b68911985c9a0157cf5dab543046b); height: 96.5vh;">
-
-        <div class="typewriter">
-            <h1 align=center style="position:relative;top:450px;font-size:100px;">
-                Hello, my name is Lucas
-            </h1>
-        </div>
-
-        <div class="fade-in-text">
-            <p align=center style="position:relative;top:450px;font-size:50px;font-style:italic;animation: fadeIn 3s;">
-                and welcome to my portfolio.
-            </p>
-        </div>
-
-    </div>
-
-    <div class="box" style="width: auto;height: auto">
-        <p>
-            <!-- discord widget -->
-            <iframe src="https://discord.com/widget?id=1036193112369926205&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" align=right></iframe>
-
-            <!-- description -->
-            Hello, my name is Lucas.
-            <br><br>I am an aspiring digital artist, photo/video editor, photographer, guitarist, pianist, gamer, and programmer.
-            <br>This is a showcase of my projects that I've culminated over time as I pursure my many passions.
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-            <!-- social media links -->
-            <div>
-                <div style="font-size: 50px;padding-left: 38%; opacity: .2;">
-                    Follow me on social media
-                </div>
-                <div style="padding-left:9%">
-                    <br>
-                    <a href="https://discord.gg/NvRqbnVpQe" target="_blank">
-                        <img src="assets\logoDiscord.png" class="social-media-link">
-                    </a>
-
-                    <a href="https://www.youtube.com/@lookalooka" target="_blank">
-                        <img src="assets\logoYoutube.png" class="social-media-link">
-                    </a>
-
-                    <a href="https://www.instagram.com/heyimlooka/" target="_blank">
-                        <img src="assets\logoInstagram.png" class="social-media-link">
-                    </a>
-
-                    <a href="https://medal.tv/u/lookalooka?invite=ur-MSxJQlEsODU1NzcwNiw" target="_blank">
-                        <img src="assets\logoMedal.png" class="social-media-link">
-                    </a>
-                </div>
-            </div>
-        </p>
-    </div>
 </body>
-
 </html>
