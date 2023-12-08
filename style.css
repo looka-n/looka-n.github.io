@@ -16,7 +16,7 @@ body {
 .navbar{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 80px;
   padding: 0 50px;
 }
@@ -30,8 +30,8 @@ body {
 }
 
 .links .linkimg {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
 }
 
@@ -41,5 +41,5 @@ body {
 }
 
 .navbar ul li:last-child a {
-  margin: 0;
+  margin: 25px;
 }
