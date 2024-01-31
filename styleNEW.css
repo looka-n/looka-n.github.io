@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*  Spacing convention:
+    Positioning
+    Size
+    Effects */
+
+* {
+    margin: 0;
+
+    box-sizing: border-box;
+
+    font-family: Poppins;
+    color: #ffffff; }
+
+body {
+    font-size: 1.1em;
+    height: 200vh;
+
+    background-color: #24283b; }
+
+/* Navigation bar */
+.navbar {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    position: sticky;
+
+    height: 4.5rem;
+
+    background-color: #24283b;}
+.navbar ul {
+    display: flex }
+.navbar ul li {
+    margin-right: 2rem;
+
+    list-style: none; }
+.navbar ul li a {
+    text-decoration: none; }
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute; }
+.dropdown .dropdown-content a {
+    display: flex;
+    padding-top: .5rem }
+.navbar .dropdown:hover .dropdown-content {
+    display: block; }
+.navbar hr {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: 90vw; }
+
+/* Intro */
+.intro {
+    margin-top: 25vh;
+    margin-left: 3rem; }
+.intro h1 {
+    font-size: 4rem; }
+.intro h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    font-style: italic;  }
+.intro .linkimg {
+    object-fit: contain;
+    margin-top: 1rem;
+    margin-right: 1rem;
+
+    width: 3rem;
+    height: 3rem;
+
+    opacity: .8; }
+.intro .linkimg:hover {
+    opacity: 1; }
+
+/* About */
+.about {
+    background-color: red;}
+
+/* Visual effects */
+    /* Glow hover */
+    .glow {
+        transition: .3s; }
+    .glow:hover {
+        text-shadow:
+        0 0 1rem #ffffff,
+        0 0 1.5rem #ffffff,
+        0 0 2rem #ffffff,
+        0 0 2.5rem #ffffff; }
+
+    /* No select */
+    .no-select {
+        user-select: none; }
+
+    /* Intro slide */
+    .intro-slide {
+    animation: slideRightText 1s; }
+    @keyframes slideRightText {
+    0% {
+        margin-left: -2rem;
+        opacity: 0; }
+    25% {
+        opacity: 0; }
+    100% {
+        margin-left: 0;
+        opacity: 1; } }
+
+    /* Fade in */
+    .fade-in {
+    animation: fadeInText 2s; }
+    @keyframes fadeInText {
+    0% {
+        opacity: 0; }
+    60% {
+        opacity: 0; }
+    100% {
+        opacity: 1; } }
