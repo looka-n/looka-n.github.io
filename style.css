@@ -1,0 +1,125 @@
+@font-face {
+    font-family: 'HelveticaNeue-Regular';
+    src: url('assets/fonts/HelveticaNeue-Regular.otf') format('opentype');
+}
+/*  Spacing convention:
+    Positioning
+    Size
+    Effects */
+
+
+/* Root  */
+* {
+    margin: 0;
+    font-family: 'HelveticaNeue-Regular', Arial, sans-serif;
+    box-sizing: border-box;
+    color: #24283b; }
+
+
+/* Body */
+body {
+    font-size: 1.1em;
+    height: 200vh;
+
+    background-color: #ffffff; }
+
+
+/* Navigation bar */
+nav {
+    padding-top: 60px;
+    padding-left:25px;
+    padding-right:25px;
+    justify-content: space-between;
+    display: flex; }
+.nav-logo {
+    height: 4em; }
+.nav-links {
+    margin-right: auto;
+    display: flex;
+    padding-top: 25px;
+    gap: 30px; }
+.nav-links li {
+    list-style: none;
+    font-size: 15px;
+    letter-spacing: 1px; }
+.nav-links a {
+    text-decoration: none; }
+.social-links {
+    padding-top: 10px;
+}
+.social-links img {
+    filter: invert(1);
+    margin-right: 25px;
+    height: 2em; }
+.hover-bar {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-decoration: none;
+}
+.hover-bar::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #24283b;
+    transition: width 0.3s ease;
+}
+.hover-bar:hover::before {
+    width: 100%;
+}
+.hover-bar:active::before {
+    right: 0;
+    left: auto;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+/* Intro */
+.intro {
+    margin-top: 25vh;
+    margin-left: 3rem; }
+.intro h1 {
+    font-size: 4rem; }
+.intro h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    font-style: italic;  }
+/* No select */
+.no-select {
+    user-select: none; }
+/* Quick fade  */
+.load-fade {
+    animation: loadElement .5s; }
+    @keyframes loadElement {
+    from {
+        opacity: 0;
+        transform: translateY(100%); }
+        to {
+        opacity: 1;
+        transform: translateY(0); }
+}
+/* Intro slide */
+.intro-slide {
+    animation: slideRightText 1s; }
+    @keyframes slideRightText {
+    0% {
+        margin-left: -2rem;
+        opacity: 0; }
+    25% {
+        opacity: 0; }
+    100% {
+        margin-left: 0;
+        opacity: 1; } }
+/* Intro fade */
+.intro-fade {
+    animation: fadeInText 2s; }
+    @keyframes fadeInText {
+    0% {
+        opacity: 0; }
+    60% {
+        opacity: 0; }
+    100% {
+        opacity: 1; } }
