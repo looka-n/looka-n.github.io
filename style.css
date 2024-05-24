@@ -1,7 +1,52 @@
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('assets/fonts/helvetica_neue/HelveticaNeue-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('assets/fonts/helvetica_neue/HelveticaNeue-Bold.otf') format('opentype');
+    font-weight: bolder;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('assets/fonts/helvetica_neue/HelveticaNeue-Medium.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('assets/fonts/helvetica_neue/HelveticaNeue-RegularItalic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('assets/fonts/helvetica_neue/HelveticaNeue-Thin.otf') format('opentype');
+    font-weight: light;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('assets/fonts/helvetica_neue/HelveticaNeue-Ultralight.otf') format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('assets/fonts/helvetica_neue/HelveticaNeue-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Root */
 * {
     margin: 0;
-    font-family: 'HelveticaNeue-Regular', Arial, sans-serif;
+    font-family: 'HelveticaNeue';
+    font-weight: normal;
+    font-style:  normal;
     box-sizing: border-box;
     color: #24283b;
 }
@@ -11,13 +56,13 @@ body {
     font-size: 1em;
     min-height: 200vh;
     background-color: #eeeeee;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
 
 /* Navigation bar */
 nav {
     padding-top: 3rem;
-    padding-left: 2.5%;
-    padding-right: 2.5%;
     justify-content: space-between;
     display: flex;
 }
@@ -33,7 +78,7 @@ nav {
 .nav-links li {
     list-style: none;
     font-size: .9em;
-    font-weight: 500;
+    font-weight: light;
 }
 .nav-links a {
     text-decoration: none;
@@ -75,7 +120,7 @@ nav {
 /* Intro */
 .intro {
     margin-top: 25vh;
-    margin-left: 3rem;
+    /* margin-left: 3rem; */
 }
 .intro h1 {
     font-size: 4rem;
@@ -137,11 +182,16 @@ nav {
 }
 
 .info-box {
-    border-radius: 25px;
-    background: #24283b;
-    padding: 20px;
+    /* border-radius: 25px; */
+    /* background: #24283b; */
+    /* padding: 20px; */
+    margin-top: 20vh;
     width: 200px;
     height: 150px;
-    opacity: .2;
-    margin-top: 50%;
+    display:flex;
+    top: 50%;
   }
+.vertical-line {
+    border-left: solid 2px #24283b;
+    margin: 0 50px;
+}
