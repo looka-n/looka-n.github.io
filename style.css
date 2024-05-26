@@ -181,16 +181,22 @@ nav {
     }
 }
 
-.info-box {
-    /* border-radius: 25px; */
-    /* background: #24283b; */
-    /* padding: 20px; */
+.info-section {
     margin-top: 20vh;
     width: 200px;
     height: 150px;
-    display:flex;
+    display: flex;
     top: 50%;
-  }
+}
+.info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info-box h1 {
+    font-weight: bold;
+}
 .vertical-line {
     border-left: solid 2px #24283b;
     margin: 0 50px;
