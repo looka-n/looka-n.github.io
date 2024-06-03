@@ -232,13 +232,18 @@ nav {
 /* Art  */
 .art-showcase {
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, 1fr));
-    gap: 1rem;
-    margin-top: 5rem;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    gap: 3rem 0rem;
+    margin-top: 3rem;
 }
 .art-showcase img {
-    width: 10rem;
-    height: auto;
+    width: 24rem;
+    height: 24rem;
+    object-fit:cover;
+}
+.art-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
