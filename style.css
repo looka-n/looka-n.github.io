@@ -226,7 +226,7 @@ footer {
 /* Art */
 .art-showcase {
     display: grid;
-    gap: 3rem 0rem;
+    gap: 4rem 0rem;
     grid-template-columns: repeat(3, minmax(0px, 1fr));
     margin-top: 3rem;
 }
@@ -272,7 +272,7 @@ footer {
 }
 .close {
     color: #24283b;
-    font-size: 40px;
+    font-size: 1em;
     font-weight: lighter;
     opacity: .5;
     position: absolute;
