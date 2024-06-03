@@ -272,12 +272,12 @@ footer {
 }
 .close {
     color: #24283b;
-    font-size: 1em;
+    font-size: 2.5em;
     font-weight: lighter;
     opacity: .5;
     position: absolute;
-    right: 35px;
-    top: 15px;
+    right: 15px;
+    top: 0px;
     transition: 0.3s;
 }
 .close:hover {
