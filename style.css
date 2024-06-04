@@ -226,20 +226,19 @@ footer {
 /* Art */
 .art-showcase {
     display: grid;
-    gap: 4rem 0rem;
+    gap: 3rem 0rem;
     grid-template-columns: repeat(3, minmax(0px, 1fr));
     margin-top: 3rem;
 }
 .art-showcase img {
-    height: 24rem;
+    aspect-ratio: 1/1;
+    width: 75%;
     object-fit: cover;
-    width: 24rem;
 }
 .art-item {
     align-items: center;
     cursor: pointer;
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 .art-bg-full-view {
@@ -283,4 +282,15 @@ footer {
 .close:hover {
     cursor: pointer;
     opacity: 1;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+    cursor: pointer;
 }

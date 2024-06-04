@@ -22,3 +22,16 @@ modal.onclick = function(event) {
     modal.style.display = "none";
     }
 }
+
+var prev = document.getElementsByClassName("prev")[0];
+var next = document.getElementsByClassName("next")[0];
+
+prev.onclick = function() {
+    currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+    modalImg.src = images[currentIndex].src;
+}
+
+next.onclick = function() {
+    currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+    modalImg.src = images[currentIndex].src;
+}
