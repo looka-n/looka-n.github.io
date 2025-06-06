@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Nguyen | Portfolio</title>
+    <link href="../../styles/ffxiv.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+    </nav>
+
+    <!-- Screenshots -->
+    <div id="gallery" class="screenshot-showcase"></div>
+    <script>
+    fetch('screenshots.json')
+    .then(response => response.json())
+    .then(images => {
+        const gallery = document.getElementById('gallery');
+        images.forEach(filename => {
+            const container = document.createElement('div');
+            container.classList.add('screenshot-container');
+
+            const img = document.createElement('img');
+            img.src = `screenshots/${filename}`;
+            img.alt = filename;
+            img.classList.add('screenshot');
+
+            container.appendChild(img);
+            gallery.appendChild(container);
+        });
+    });
+    </script>
+</body>
