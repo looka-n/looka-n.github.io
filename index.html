@@ -1,67 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Nguyen | Portfolio</title>
-    <link href="style.css" rel="stylesheet">
-</head>
+<!doctype html>
+<html>
+  <head>
+    <title>Home &#x2022 looka</title>
+     <link href="style.css" rel="stylesheet">
+  </head>
 
-<body>
-    
-    <!-- Navigation bar -->
-    <nav>
-        <img class="nav-logo" src="assets/index/logo.jpg">
+  <body>
+    <header>
+      <nav>
+        <img class="nav-logo" src="assets/images/logo.jpg">
         <ul class="nav-links">
-            <li><a class="hover-bar load-fade" href="">HOME</a></li>
-            <li><a class="hover-bar load-fade" href="pages/projects.html">PROJECTS</a></li>
-            <li><a class="hover-bar load-fade" href="pages/art.html">ART</a></li>
-            <li><a class="hover-bar load-fade" href="pages/contact.html">CONTACT</a></li>
-            <li><a class="hover-bar load-fade" href="pages/ffxiv/ffxiv.html">FFXIV</a></li>
-        <div class="social-links load-fade">
-            <a href="https://github.com/looka-n?tab=repositories"><img src="assets/index/logo_github.png"></a>
-            <a href="https://www.linkedin.com/in/nguyenlucas/"><img src="assets/index/logo_linkedin.png"></a>
-            <a href="https://www.instagram.com/heyitslooka/"><img src="assets/index/logo_instagram.png"></a>
-        </div>
-    </nav>
+          <li class="hover-bar"><a href="index.html">dev</a></li>
+          <li class="hover-bar"><a href="art.html">art</a></li>
+          <li class="hover-bar nav-dropdown">
+            <a class="no-select">games</a>
+              <ul class="nav-dropdown-menu">
+                <li><a href="ffxiv.html">ffxiv</a></li>
+                <li><a href="minecraft.html">minecraft</a></li>
+                <li><a href="valorant.html">valorant</a></li>
+              </ul>
+          </li>
+        </ul>
+        <div class="contact-button"><a href="#"><img class="contact-img" src="assets/images/contact.svg"></a></div>
+      </nav>
+    </header>
 
-    <!-- Intro -->
-    <div class="intro">
-        <h1 class="intro-slide no-select">
-            Hello, I'm Looka
-        </h1>
-        <h2 class="intro-fade no-select">
-            and welcome to my portfolio.
-        </h2>
-    </div>
+    <main>
+      <div class="intro">
+        <h1 class="intro-slide">hi, i'm looka</h1>
+        <h2 class="intro-fade">and welcome to my portfolio</h2>
+      </div>
 
-    <!-- Info section -->
-    <div class="info-section load-fade">
-        <div class="info-box">
-            <h1>00+</h1>
-            <p>Filler Text</p>
-        </div>
-        <div class="vertical-line"></div>
-        <div class="info-box">
-            <h1>00+</h1>
-            <p>Filler Text</p>
-        </div>
-        <div class="vertical-line"></div>
-        <div class="info-box">
-            <h1>00+</h1>
-            <p>Filler Text</p>
-        </div>
-    </div>
+      <h2>about me</h2>
+        <p>
+          Full-stack developer, driven by a constant desire to learn, design, and create. I find deep value in trying to understand how things work and using that knowledge to build something personal and meaningful to me. Learning is not just a step to overcome, it is a nonstop effort. I enjoy the process and take pride in it, especially in working through the hard parts. I strive to do more, to explore new ideas, and to turn my curiosity into "something". I hope to inspire by showing my works and leave something worthwhile.
+        </p>
 
-    <!-- Footer -->
-    <div class="divider"></div>
+      <h2>featured projects</h2>
+          <div class="projects">
+            <div class="project-item">
+              <h3>mobile-journal</h3>
+            </div>
+            <div class="project-item">
+              <h3>project item 0</h3>
+              <p>lorem ipsum</p>
+            </div>
+            <div class="project-item">
+              <h3>project item 1</h3>
+              <p>lorem ipsum</p>
+            </div>
+            <div class="project-item">
+              <h3>project item 2</h3>
+              <p>lorem ipsum</p>
+            </div>
+            <div class="project-item">
+              <h3>project item 3</h3>
+              <p>lorem ipsum</p>
+            </div>
+            <div class="project-item">
+              <h3>project item 4</h3>
+              <p>lorem ipsum</p>
+            </div>
+          </div>
+          <div class="projects-link">more...</div>
+
+      <h2>tech stack</h2>
+        <ul class="tech-stack">
+          <li class="tech-stack-item"><img class="tech-stack-item-img" src="assets/images/tech_stack/python.svg"></img><p>Python</p></li>
+          <li class="tech-stack-item"><img class="tech-stack-item-img" src="assets/images/tech_stack/cpp.svg"><p>C++</p></li>
+          <li class="tech-stack-item"><img class="tech-stack-item-img" src="assets/images/tech_stack/firebase.svg"><p>Firebase</p></li>
+          <li class="tech-stack-item"><img class="tech-stack-item-img" src="assets/images/tech_stack/react_native.svg"><p>React<br>Native</p></li>
+        </ul>
+    </main>
+
     <footer>
-        <div class="footer-links">
-            <a href="https://github.com/looka-n?tab=repositories"><img src="assets/index/logo_github.png"></a>
-            <a href="https://www.linkedin.com/in/nguyenlucas/"><img src="assets/index/logo_linkedin.png"></a>
-            <a href="https://www.instagram.com/heyitslooka/"><img src="assets/index/logo_instagram.png"></a>
-        </div>
-        <p>© 2024 Lucas Nguyen</p>
+      <p>© 2025 Lucas Nguyen</p>
     </footer>
-</body>
+  </body>
 </html>
