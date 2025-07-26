@@ -108,6 +108,9 @@ nav img {
 .nav-dropdown:hover .nav-dropdown-menu {
   display: block;
 }
+.contact-button {
+    display: flex;
+}
 .contact-img {
     filter: invert() opacity(50%);
     height: 2rem;
@@ -119,6 +122,15 @@ main {
     width: 40%;
     margin: 0 auto;
     text-align: left;
+    animation: loadPage 0.6s;
+}
+@keyframes loadPage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 h1 {
     color: #eeeeee;
@@ -207,6 +219,19 @@ footer {
     100% {
         opacity: 1;
     }
+}
+.intro-bar {
+    animation: slideInBar 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+@keyframes slideInBar {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 100%;
+  }
 }
 .projects {
     gap: 1rem;
