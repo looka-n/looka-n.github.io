@@ -29,6 +29,36 @@
       <h1>art</h1>
 
       <h2>showcase</h2>
+      <div id="gallery" class="art-showcase"></div>
+      <script>
+      fetch('art_showcase.json')
+      .then(response => response.json())
+      .then(images => {
+        const gallery = document.getElementById('gallery');
+        images.forEach(({ title, filename, desc }) => {
+          const container = document.createElement('div');
+          container.classList.add('art-container');
+
+          const titleElem = document.createElement('h3');
+          titleElem.textContent = title;
+          titleElem.classList.add('art-title');
+
+          const img = document.createElement('img');
+          img.src = `assets/images/art_showcase/${filename}`;
+          img.alt = filename;
+          img.classList.add('art-img');
+
+          const descElem = document.createElement('p');
+          descElem.textContent = desc;
+          descElem.classList.add('art-desc');
+
+          container.appendChild(titleElem);
+          container.appendChild(img);
+          container.appendChild(descElem);
+          gallery.appendChild(container);
+        });
+      });
+      </script>
     </main>
 
     <footer>

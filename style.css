@@ -138,6 +138,34 @@ p {
     font-weight: 100;
     font-size: 1rem;
 }
+.no-select {
+    user-select: none;
+}
+.table-of-contents {
+    background-color: #27272a;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    color: #bbbbbc;
+    width: 50%
+}
+.table-of-contents h2 {
+    color: #bbbbbc;
+    margin-top: 0rem;
+}
+.table-of-contents li {
+    list-style: none;
+}
+
+/* Footer */
+footer {
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    color: #eeeeee;
+    background-color: #171717;
+}
+
+/* Home */
 .intro h1 {
     text-decoration: none;
     color: #d6ba7c
@@ -180,9 +208,6 @@ p {
         opacity: 1;
     }
 }
-.no-select {
-    user-select: none;
-}
 .projects {
     gap: 1rem;
     display: grid;
@@ -222,6 +247,22 @@ p {
     filter: invert() opacity(75%);
     transition-duration: 0.5s;
 }
+/* Art */
+.art-container {
+    margin-bottom: 3rem;
+    background-color: #27272a;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+.art-img {
+    width: 100%;
+}
+.art-title {
+    user-select: none;
+}
+.art-desc {
+    user-select: none;
+}
 /* FFXIV */
 .screenshot-showcase {
     display: grid;
@@ -243,13 +284,4 @@ p {
 }
 .screenshot-container:hover .screenshot {
     transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-    margin: 0 auto;
-    justify-content: center;
-    display: flex;
-    color: #eeeeee;
-    background-color: #171717;
 }
