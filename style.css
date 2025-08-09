@@ -153,20 +153,6 @@ p {
 .no-select {
     user-select: none;
 }
-.table-of-contents {
-    background-color: #27272a;
-    border-radius: 0.25rem;
-    padding: 1rem;
-    color: #bbbbbc;
-    width: 50%
-}
-.table-of-contents h2 {
-    color: #bbbbbc;
-    margin-top: 0rem;
-}
-.table-of-contents li {
-    list-style: none;
-}
 
 /* Footer */
 footer {
@@ -275,7 +261,6 @@ footer {
 /* Art */
 .art-container {
     margin-bottom: 3rem;
-    background-color: #27272a;
     border-radius: 1rem;
     padding: 0.5rem;
 }
