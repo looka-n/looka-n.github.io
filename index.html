@@ -1,79 +1,93 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Home &#x2022 looka</title>
-     <link href="style.css" rel="stylesheet">
-  </head>
-
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
     <header>
-      <nav>
-        <img class="nav-logo" src="assets/images/logo.jpg">
-        <ul class="nav-links">
-          <li class="hover-bar"><a href="index.html">dev</a></li>
-          <hr>
-          <li class="hover-bar"><a href="projects.html">projects</a></li>
-          <hr>
-          <li class="hover-bar"><a href="csv.html">resume</a></li>
-          <hr>
-          <li class="hover-bar"><a href="art.html">personal</a></li>
-        </ul>
-        <div class="contact-button"><a href="#"><img class="contact-img" src="assets/images/contact.svg"></a></div>
-      </nav>
     </header>
 
     <main>
-      <div class="intro">
-        <h1 class="intro-slide">hi, i'm looka</h1>
-        <h2 class="intro-fade">and welcome to my portfolio</h2>
-      </div>
+        <!-- Section.AboutMe -->
+        <h2>About Me</h2>
+        <!-- Section.Experience -->
+        <h2>Experience</h2>
+        <!-- Section.Projects -->
+        <h2>Featured Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <div class="project-media">
+                    <img class="project-img" src="assets/images/projects/mobile_journal.jpg">
+                </div>
+                <div class="project-text">
+                    <h3>Journal App</h3>
+                    <p>A minimalist journal app with an intuitive flow similar to Instagram.</p>
+                    <ul class="project-tags">
+                        <li>React Native</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-item">
+                <div class="project-media">
+                    <img class="project-img" src="assets/images/projects/finance_app.jpg">
+                </div>
+                <div class="project-text">
+                    <h3>Finance App</h3>
+                    <p>A financing app to more easily visualize and track user spending.</p>
+                    <ul class="project-tags">
+                        <li>Next.js</li>
+                        <li>Neon</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-      <hr class="intro-bar">
+        <!-- Section.TechStack -->
+        <section class="tech">
+    <h2>Current technologies</h2>
+    <p class="tech-subtitle">I'm proficient in a range of modern technologies that help me build clean, functional products.</p>
 
-      <h2>about me</h2>
-        <p>
-          Full-stack developer, driven by a constant desire to learn, design, and create. I find deep value in trying to understand how things work and using that knowledge to build something personal and meaningful to me. Learning is not just a step to overcome, it is a nonstop effort. I enjoy the process and take pride in it, especially in working through the hard parts. I strive to do more, to explore new ideas, and to turn my curiosity into "something". I hope to inspire by showing my works and leave something worthwhile.
-        </p>
+    <div class="tech-grid">
+        <article class="tech-card">
+        <div class="tech-icon" aria-hidden="true">⚛️</div>
+        <div class="tech-meta">
+            <h3>React</h3>
+            <p>JavaScript library</p>
+        </div>
+        </article>
 
-      <h2>featured projects</h2>
-          <div class="projects">
-            <div class="project-item">
-              <h3>mobile-journal</h3>
-            </div>
-            <div class="project-item">
-              <h3>project item 0</h3>
-              <p>lorem ipsum</p>
-            </div>
-            <div class="project-item">
-              <h3>project item 1</h3>
-              <p>lorem ipsum</p>
-            </div>
-            <div class="project-item">
-              <h3>project item 2</h3>
-              <p>lorem ipsum</p>
-            </div>
-            <div class="project-item">
-              <h3>project item 3</h3>
-              <p>lorem ipsum</p>
-            </div>
-            <div class="project-item">
-              <h3>project item 4</h3>
-              <p>lorem ipsum</p>
-            </div>
-          </div>
-          <a href="projects.html"><div class="projects-link">more...</div></a>
+        <article class="tech-card">
+        <div class="tech-icon" aria-hidden="true">TS</div>
+        <div class="tech-meta">
+            <h3>TypeScript</h3>
+            <p>Safer JavaScript</p>
+        </div>
+        </article>
 
-      <h2>tech stack</h2>
-        <ul class="tech-stack">
-          <li class="tech-stack-item"><img class="tech-stack-item-img" src="assets/images/tech_stack/python.svg"></img><p>Python</p></li>
-          <li class="tech-stack-item"><img class="tech-stack-item-img" src="assets/images/tech_stack/cpp.svg"><p>C++</p></li>
-          <li class="tech-stack-item"><img class="tech-stack-item-img" src="assets/images/tech_stack/firebase.svg"><p>Firebase</p></li>
-          <li class="tech-stack-item"><img class="tech-stack-item-img" src="assets/images/tech_stack/react_native.svg"><p>React<br>Native</p></li>
-        </ul>
+        <article class="tech-card">
+        <div class="tech-icon" aria-hidden="true">▲</div>
+        <div class="tech-meta">
+            <h3>Next.js</h3>
+            <p>React framework</p>
+        </div>
+        </article>
+
+        <article class="tech-card">
+        <div class="tech-icon" aria-hidden="true">🎨</div>
+        <div class="tech-meta">
+            <h3>Figma</h3>
+            <p>Design tool</p>
+        </div>
+        </article>
+    </div>
+    </section>
     </main>
 
     <footer>
-      <p>© 2025 Lucas Nguyen</p>
     </footer>
-  </body>
+</body>
 </html>
