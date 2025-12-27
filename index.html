@@ -3,91 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home • looka</title>
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <header>
+        <nav>
+            <img class="nav-logo" src="assets/images/logo.jpg">
+            <ul class="nav-links">
+            <li class="hover-bar"><a href="index.html">dev</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <!-- Section.AboutMe -->
-        <h2>About Me</h2>
-        <!-- Section.Experience -->
-        <h2>Experience</h2>
-        <!-- Section.Projects -->
-        <h2>Featured Projects</h2>
+
+    <section class="intro">
+        <h1 class="intro-slide">hi, i'm looka</h1>
+        <h2 class="intro-fade">and welcome to my portfolio</h2>
+
+        <hr class="intro-bar">
+    </section>
+
+    <section class="about">
+        <h2 id="about-title">About Me</h2>
+        <p>Full-stack developer, driven by a constant desire to learn, design, and create. I find deep value in trying to understand how things work and using that knowledge to build something personal and meaningful to me. Learning is not just a step to overcome, it is a nonstop effort. I enjoy the process and take pride in it, especially in working through the hard parts. I strive to do more, to explore new ideas, and to turn my curiosity into "something". I hope to inspire by showing my works and leave something worthwhile.</p>
+    </section>
+
+    <section class="experience">
+    <h2 id="experience-title">Experience</h2>
+    <ol class="exp-timeline">
+        <li class="exp-item">
+        <div class="exp-marker">
+            <img src="assets/images/experience/crumbl.png" alt="Company 1 logo">
+        </div>
+        <div class="exp-content">
+            <h3 class="exp-org">Crumbl</h3>
+            <p class="exp-role">Baker</p>
+            <p class="exp-date">Sep 2025 — Present</p>
+
+            <ul class="exp-points">
+            <li>Did XYZ.</li>
+            </ul>
+        </div>
+        </li>
+        <li class="exp-item">
+        <div class="exp-marker">
+            <img src="assets/images/experience/petsupply.png" alt="Company 1 logo">
+        </div>
+        <div class="exp-content">
+            <h3 class="exp-org">Pet Supply OC</h3>
+            <p class="exp-role">Retail Associate</p>
+            <p class="exp-date">Jun 2024 - Mar 2025</p>
+
+            <ul class="exp-points">
+            <li>Did XYZ.</li>
+            </ul>
+            </ul>
+        </div>
+        </li>
+        <li class="exp-item">
+        <div class="exp-marker">
+            <img src="assets/images/experience/mcdonalds.png" alt="Company 1 logo">
+        </div>
+        <div class="exp-content">
+            <h3 class="exp-org">McDonald's</h3>
+            <p class="exp-role">Crew Worker</p>
+            <p class="exp-date">Jun 2022 - Aug 2022</p>
+
+            <ul class="exp-points">
+            <li>Did XYZ.</li>
+            </ul>
+        </div>
+        </li>
+        <li class="exp-item">
+        <div class="exp-marker">
+            <img src="assets/images/experience/csulb.png" alt="Company 2 logo">
+        </div>
+        <div class="exp-content">
+            <h3 class="exp-org">California State University, Long Beach</h3>
+            <p class="exp-role">Bachelor of Computer Science</p>
+            <p class="exp-date">Aug 2021 — Dec 2025</p>
+            <ul class="exp-points">
+            <li>Did XYZ.</li>
+            </ul>
+        </div>
+        </li>
+    </ol>
+    </section>
+
+    <section>
+        <h2 id="projects-title">Featured Projects</h2>
+
         <div class="project-list">
-            <div class="project-item">
-                <div class="project-media">
-                    <img class="project-img" src="assets/images/projects/mobile_journal.jpg">
-                </div>
-                <div class="project-text">
-                    <h3>Journal App</h3>
-                    <p>A minimalist journal app with an intuitive flow similar to Instagram.</p>
-                    <ul class="project-tags">
-                        <li>React Native</li>
-                        <li>Firebase</li>
-                    </ul>
-                </div>
+            <article class="project-item">
+            <div class="project-media">
+                <img class="project-img" src="assets/images/projects/mobile_journal.jpg" alt="Screenshot of Journal App">
             </div>
-            <div class="project-item">
-                <div class="project-media">
-                    <img class="project-img" src="assets/images/projects/finance_app.jpg">
-                </div>
-                <div class="project-text">
-                    <h3>Finance App</h3>
-                    <p>A financing app to more easily visualize and track user spending.</p>
-                    <ul class="project-tags">
-                        <li>Next.js</li>
-                        <li>Neon</li>
-                    </ul>
-                </div>
+
+            <div class="project-text">
+                <h3>Journal App</h3>
+                <p>A minimalist journal app with an intuitive flow similar to Instagram.</p>
+
+                <ul class="project-tags" role="list">
+                <li>React Native</li>
+                <li>Firebase</li>
+                </ul>
             </div>
+            </article>
+
+            <article class="project-item">
+            <div class="project-media">
+                <img class="project-img" src="assets/images/projects/finance_app.jpg" alt="Screenshot of Finance App">
+            </div>
+
+            <div class="project-text">
+                <h3>Finance App</h3>
+                <p>A financing app to more easily visualize and track user spending.</p>
+
+                <ul class="project-tags" role="list">
+                <li>Next.js</li>
+                <li>Neon</li>
+                </ul>
+            </div>
+            </article>
         </div>
+    </section>
 
-        <!-- Section.TechStack -->
-        <section class="tech">
-    <h2>Current technologies</h2>
-    <p class="tech-subtitle">I'm proficient in a range of modern technologies that help me build clean, functional products.</p>
+    <section class="tech">
+        <h2 id="tech-title">Technologies</h2>
+        <p class="tech-subtitle">My current technologies that I develop with.</p>
 
-    <div class="tech-grid">
+        <div class="tech-grid">
         <article class="tech-card">
-        <div class="tech-icon" aria-hidden="true">⚛️</div>
-        <div class="tech-meta">
-            <h3>React</h3>
-            <p>JavaScript library</p>
-        </div>
-        </article>
-
-        <article class="tech-card">
-        <div class="tech-icon" aria-hidden="true">TS</div>
-        <div class="tech-meta">
+            <img class="tech-icon" src="assets/images/technologies/typescript.png">
+            <div class="tech-meta">
             <h3>TypeScript</h3>
-            <p>Safer JavaScript</p>
-        </div>
+            <p>Typed JavaScript</p>
+            </div>
         </article>
-
         <article class="tech-card">
-        <div class="tech-icon" aria-hidden="true">▲</div>
-        <div class="tech-meta">
-            <h3>Next.js</h3>
-            <p>React framework</p>
-        </div>
-        </article>
-
-        <article class="tech-card">
-        <div class="tech-icon" aria-hidden="true">🎨</div>
-        <div class="tech-meta">
+            <img class="tech-icon" src="assets/images/technologies/figma.png">
+            <div class="tech-meta">
             <h3>Figma</h3>
             <p>Design tool</p>
-        </div>
+            </div>
         </article>
-    </div>
+        <article class="tech-card">
+            <img class="tech-icon" src="assets/images/technologies/github.png">
+            <div class="tech-meta">
+            <h3>Github</h3>
+            <p>Version control</p>
+            </div>
+        </article> 
+        <article class="tech-card">
+            <img class="tech-icon" src="assets/images/technologies/cpp.png">
+            <div class="tech-meta">
+            <h3>C++</h3>
+            <p>Programming language</p>
+            </div>
+        </article>
+        <article class="tech-card">
+            <img class="tech-icon" src="assets/images/technologies/python.png">
+            <div class="tech-meta">
+            <h3>Python</h3>
+            <p>Programming language</p>
+            </div>
+        </article>
+        <article class="tech-card">
+            <img class="tech-icon" src="assets/images/technologies/react.png">
+            <div class="tech-meta">
+            <h3>React</h3>
+            <p>JavaScript framework</p>
+            </div>
+        </article>
+        <article class="tech-card">
+            <img class="tech-icon" src="assets/images/technologies/nextjs.png">
+            <div class="tech-meta">
+            <h3>Next.js</h3>
+            <p>React framework</p>
+            </div>
+        </article>
+        <article class="tech-card">
+            <img class="tech-icon" src="assets/images/technologies/docker.png">
+            <div class="tech-meta">
+            <h3>Docker</h3>
+            <p>Containerizaton</p>
+            </div>
+        </article>
+        </div>
     </section>
     </main>
 
     <footer>
+        <p>© 2026 Lucas Nguyen</p>
     </footer>
 </body>
 </html>
