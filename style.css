@@ -44,10 +44,16 @@ body {
    HEADER
 ========================= */
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  padding-top: 0.50rem;
+  padding-bottom: 0.50rem;
+  background: var(--color-bg);
   width: 40%;
 }
 nav {
-    /* width: 40%; */
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
@@ -93,6 +99,25 @@ nav {
     right: 0;
     transition: width 0.3s ease;
     width: 0;
+}
+.nav-cta {
+  justify-self: end;
+
+  text-decoration: none;
+  color: var(--color-bg);
+  background: var(--color-accent);
+
+  font-size: 0.85rem;
+  font-weight: 700;
+
+  padding: 0.55rem 0.85rem;
+  border-radius: 10px;
+
+  transition: transform 150ms ease, opacity 150ms ease;
+}
+.nav-cta:hover {
+  /* transform: translateY(-1px); */
+  opacity: 0.9;
 }
 
 /* =========================
