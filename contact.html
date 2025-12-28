@@ -1,46 +1,53 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Contact me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact • looka</title>
+    <link href="style.css" rel="stylesheet">
 </head>
-
 <body>
-<form method="post" action="https://forms.un-static.com/forms/https://forms.un-static.com/forms/8a42cee6396520e03f0c545700db86313e171f5b">
-  <div class="form-group row">
-    <label for="name" class="col-4 col-form-label">Name</label>
-    <div class="col-8">
-      <div class="input-group">
-        <div class="input-group-addon">
-          <i class="fa fa-user"></i>
-        </div>
-        <input id="name" name="name" placeholder="Please enter your name" type="text" required="required" class="form-control">
-      </div>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="email" class="col-4 col-form-label">E-mail address</label>
-    <div class="col-8">
-      <div class="input-group">
-        <div class="input-group-addon">
-          <i class="fa fa-envelope"></i>
-        </div>
-        <input id="email" name="email" placeholder="Your e-mail address" type="text" required="required" class="form-control">
-      </div>
-    </div>
-  </div>
-  <div class="form-group row">
-    <label for="message" class="col-4 col-form-label">Message</label>
-    <div class="col-8">
-      <textarea id="message" name="message" cols="40" rows="10" required="required" class="form-control"></textarea>
-    </div>
-  </div>
-  <div class="form-group row">
-    <div class="offset-4 col-8">
-      <button name="submit" type="submit" class="btn btn-primary">Send</button>
-    </div>
-  </div>
-</form>
-<div align="center">
-  <p><small>(Powered by <a rel="nofollow" href="Un-static Forms">Un-static Forms</a>)</small></p>
-</div>
+    <header>
+        <nav>
+            <img class="nav-logo" src="assets/images/logo.jpg">
+            <ul class="nav-links">
+            <li class="hover-bar"><a href="index.html">dev</a></li>
+            <li class="hover-bar"><a href="projects.html">projects</a></li>
+            </ul>
+            <a class="nav-cta" href="contact.html">Contact Me</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Let's get to know each other.</h1>
+        <!-- CONTACT FORM -->
+        <section class="contact">
+            <form class="contact-form" method="post" action="https://forms.un-static.com/forms/3fcf166a5cbc22194799fb70406afd3411166d02">
+                <div class="contact-row">
+                    <label for="name">Name</label>
+                    <input id="name" name="name" placeholder="Please enter your name" type="text" required>
+                </div>
+
+                <div class="contact-row">
+                    <label for="email">E-mail address</label>
+                    <input id="email" name="email" placeholder="Your e-mail address" type="email" required>
+                </div>
+
+                <div class="contact-row">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="8" placeholder="Message here..." required></textarea>
+                </div>
+
+                <button class="contact-submit" name="submit" type="submit">Send</button>
+
+                <p class="contact-powered"><small>(Powered by Un-static Forms)</small></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Lucas Nguyen</p>
+    </footer>
+    
 </body>
 </html>
