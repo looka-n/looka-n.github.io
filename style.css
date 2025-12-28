@@ -1,44 +1,47 @@
 @font-face {
-    font-family: 'sf-mono';
-    src: url('assets/fonts/sf-mono/SFMono-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'sf-mono';
+  src: url('assets/fonts/sf-mono/SFMono-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'sf-mono';
-    src: url('assets/fonts/sf-mono/SFMono-Bold.otf') format('opentype');
-    font-weight: bold;
-    font-style: normal;
+  font-family: 'sf-mono';
+  src: url('assets/fonts/sf-mono/SFMono-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'sf-mono';
-    src: url('assets/fonts/sf-mono/SFMono-Light.otf') format('opentype');
-    font-weight: 100;
-    font-style: normal;
+  font-family: 'sf-mono';
+  src: url('assets/fonts/sf-mono/SFMono-Light.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
 }
 @font-face {
-    font-family: 'sf-mono';
-    src: url('assets/fonts/sf-mono/SFMono-LightItalic.otf') format('opentype');
-    font-weight: 100;
-    font-style: italic;
+  font-family: 'sf-mono';
+  src: url('assets/fonts/sf-mono/SFMono-LightItalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
 }
 :root {
-    --color-bg: #1d1f20;
-    --color-text: #f5f5f7;
-    --color-accent: #d6ba7c;
+  --color-bg: #1d1f20;
+  --color-text: #f5f5f7;
+  --color-accent: #d6ba7c;
 }
 html {
-    overflow-y: scroll;
+  overflow-y: scroll;
+  height: 100%;
 }
 body {
-    background-color: var(--color-bg); 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'sf-mono';
-    font-weight: normal;
-    font-style: normal;
-    color: var(--color-text);
+  height: 100%;
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'sf-mono';
+  font-weight: normal;
+  font-style: normal;
+  color: var(--color-text);
 }
 /* =========================
    HEADER
@@ -51,54 +54,56 @@ header {
   padding-top: 0.50rem;
   padding-bottom: 0.50rem;
   background: var(--color-bg);
-  width: 40%;
+  width: 100%;
 }
 nav {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  width: 40%;
+  align-items: center;
+  margin: 0 auto;
 }
 .nav-logo {
-    height: 4rem;
-    justify-self: start;
-    margin-right: 1.5rem;
+  height: 4rem;
+  justify-self: start;
+  margin-right: 1.5rem;
 }
 .nav-links {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 0.95rem;
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.95rem;
 }
 .nav-links a {
-    text-decoration: none;
-    color: var(--color-text);
+  text-decoration: none;
+  color: var(--color-text);
 }
 .hover-bar {
-    display: inline-block;
-    padding-bottom: 0.30em;
-    position: relative;
-    text-decoration: none;
+  display: inline-block;
+  padding-bottom: 0.30em;
+  position: relative;
+  text-decoration: none;
 }
 .hover-bar::before {
-    background-color: var(--color-accent);
-    bottom: 0;
-    content: '';
-    height: 0.15rem;
-    left: 0;
-    position: absolute;
-    transition: width 0.3s ease;
-    width: 0;
+  background-color: var(--color-accent);
+  bottom: 0;
+  content: '';
+  height: 0.15rem;
+  left: 0;
+  position: absolute;
+  transition: width 0.3s ease;
+  width: 0;
 }
 .hover-bar:hover::before {
-    width: 100%;
+  width: 100%;
 }
 .nav-hover-bar:active::before {
-    left: auto;
-    right: 0;
-    transition: width 0.3s ease;
-    width: 0;
+  left: auto;
+  right: 0;
+  transition: width 0.3s ease;
+  width: 0;
 }
 .nav-cta {
   justify-self: end;
@@ -126,6 +131,7 @@ main {
     width: 40%;
     margin: 0 auto;
     text-align: left;
+    flex: 1;
 }
 /* Section: Intro */
 .intro {
@@ -477,6 +483,45 @@ main {
   margin: 0.25rem 0 0;
   opacity: 0.45;
   font-size: 0.75rem;
+}
+/* Section: Contact Email */
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.contact-email-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}
+.icon-email {
+  display: inline-flex;
+}
+.copy-btn {
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 0.35rem 0.5rem;
+  cursor: pointer;
+
+  transition: opacity 150ms ease, transform 150ms ease;
+}
+.copy-btn:hover {
+  opacity: 1;
+}
+.copy-btn:active {
+  transform: translateY(1px);
 }
 /* Section: Contact Success */
 .success {
