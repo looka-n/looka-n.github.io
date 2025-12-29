@@ -123,6 +123,34 @@ nav {
 .nav-cta:hover {
   opacity: 0.9;
 }
+@media (max-width: 700px) {
+  nav {
+    width: 90%;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "logo . cta"
+      "links links links";
+    row-gap: 0.5rem;
+  }
+  .nav-logo {
+    grid-area: logo;
+    height: 3.2rem;
+    margin-right: 0;
+  }
+  .nav-links {
+    grid-area: links;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+  .nav-cta {
+    grid-area: cta;
+    justify-self: end;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.8rem;
+  }
+}
 
 /* =========================
    MAIN
