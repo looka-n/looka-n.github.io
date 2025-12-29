@@ -42,6 +42,17 @@ body {
   font-weight: normal;
   font-style: normal;
   color: var(--color-text);
+  animation: pageFadeIn 220ms ease-out;
+}
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 /* =========================
    HEADER
@@ -254,6 +265,28 @@ main {
 .about-socials a:hover img {
   opacity: 1;
 }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 2rem;
+  align-items: start;
+}
+.about-photo img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  opacity: 0.95;
+}
+/* Mobile */
+@media (max-width: 700px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-photo {
+    order: -1;
+    max-width: 200px;
+  }
+}
 /* Section: Experience */
 .experience {
   margin-top: 3rem;
@@ -396,6 +429,33 @@ main {
   border: 1px solid rgba(255, 255, 255, 0.12);
 
   opacity: 0.85;
+}
+.projects-footer {
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.projects-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text);
+  opacity: 0.35;
+
+  transition: opacity 150ms ease;
+}
+.projects-more:hover {
+  opacity: 0.6;
+}
+.projects-more svg {
+  transition: transform 150ms ease;
+}
+.projects-more:hover svg {
+  transform: translateX(2px);
 }
 /* Section: Technologies */
 .tech {
