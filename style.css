@@ -744,6 +744,40 @@ main {
   font-size: 0.9rem;
   opacity: 0.6;
 }
+/* Section: 404 Error */
+.error-page {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.error-face {
+  font-size: 4rem;
+  font-weight: 700;
+  opacity: 0.5;
+  margin-bottom: 0.5rem;
+}
+.error-code {
+  margin: 0;
+  font-size: 3rem;
+  opacity: 0.7;
+}
+.error-text {
+  margin: 0.25rem 0 0;
+  font-size: 1rem;
+  opacity: 0.6;
+}
+.error-subtext {
+  margin: 0.5rem 0 1.5rem;
+  font-size: 0.8rem;
+  opacity: 0.4;
+  max-width: 40ch;
+}
+.error-cta {
+  margin-top: 0.5rem;
+}
 
 /* =========================
    FOOTER
