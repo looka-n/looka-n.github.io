@@ -15,6 +15,13 @@
             <li class="hover-bar"><a href="projects.html">projects</a></li>
             <li class="hover-bar"><a href="resume.html">resume</a></li>
             </ul>
+
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <a class="nav-cta" href="contact.html">Contact Me</a>
         </nav>
     </header>
@@ -251,5 +258,14 @@
     <footer>
         <p>© 2026 Lucas Nguyen</p>
     </footer>
+
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const links = document.querySelector('.nav-links');
+
+        toggle.addEventListener('click', () => {
+            links.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>

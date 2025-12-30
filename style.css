@@ -116,6 +116,20 @@ nav {
   transition: width 0.3s ease;
   width: 0;
 }
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--color-text);
+  margin: 4px 0;
+  opacity: 0.8;
+}
 .nav-cta {
   justify-self: end;
 
@@ -136,30 +150,30 @@ nav {
 }
 @media (max-width: 700px) {
   nav {
-    width: 90%;
     grid-template-columns: auto 1fr auto;
-    grid-template-areas:
-      "logo . cta"
-      "links links links";
-    row-gap: 0.5rem;
   }
-  .nav-logo {
-    grid-area: logo;
-    height: 3.2rem;
-    margin-right: 0;
+  .nav-toggle {
+    display: block;
+    justify-self: end;
   }
   .nav-links {
-    grid-area: links;
-    justify-content: center;
-    flex-wrap: wrap;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    background: var(--color-bg);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
     gap: 1rem;
-    font-size: 0.9rem;
+
+    padding: 1rem 0;
   }
-  .nav-cta {
-    grid-area: cta;
-    justify-self: end;
-    padding: 0.5rem 0.7rem;
-    font-size: 0.8rem;
+  .nav-links.open {
+    display: flex;
   }
 }
 
