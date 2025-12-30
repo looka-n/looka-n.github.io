@@ -616,6 +616,41 @@ main {
     aspect-ratio: 16/9;
   }
 }
+/* Section: Resume Page */
+.resume-download {
+  text-decoration: none;
+  color: var(--color-bg);
+  background: var(--color-accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.55rem 0.85rem;
+  border-radius: 10px;
+  transition: opacity 150ms ease, transform 150ms ease;
+  white-space: nowrap;
+}
+.resume-download:hover {
+  opacity: 0.9;
+}
+.resume-viewer {
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  height: 78vh;
+}
+.resume-viewer embed {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.resume-actions {
+  margin-top: 1rem;
+  display: flex;
+}
+@media (max-width: 700px) {
+  .resume-viewer { height: 70vh; }
+}
 /* Section: Contact */
 .contact {
   margin-top: 2rem;
@@ -684,7 +719,6 @@ main {
   opacity: 0.45;
   font-size: 0.75rem;
 }
-/* Section: Contact Email */
 .contact-email {
   display: inline-flex;
   align-items: center;
