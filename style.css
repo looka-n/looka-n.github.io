@@ -22,10 +22,34 @@
   font-weight: 100;
   font-style: italic;
 }
+
 :root {
-  --color-bg: #1d1f20;
-  --color-text: #f5f5f7;
-  --color-accent: #d6ba7c;
+  /* Base */
+  --bg: #1d1f20;
+  --text: #f5f5f7;
+  --accent: #d6ba7c;
+
+  /* Surfaces */
+  --surface-1: rgba(255, 255, 255, 0.04);
+  --surface-2: rgba(255, 255, 255, 0.06);
+
+  /* Borders */
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.12);
+
+  /* Shadows */
+  --shadow-1: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+  /* Text colors */
+  --text-75: rgba(245, 245, 247, 0.75);
+  --text-70: rgba(245, 245, 247, 0.7);
+  --text-60: rgba(245, 245, 247, 0.6);
+  --text-50: rgba(245, 245, 247, 0.5);
+  --text-45: rgba(245, 245, 247, 0.45);
+  --text-35: rgba(245, 245, 247, 0.35);
+
+  /* Accent variants */
+  --accent-80: rgba(214, 186, 124, 0.8);
 }
 html {
   overflow-y: scroll;
@@ -33,7 +57,7 @@ html {
 }
 body {
   height: 100%;
-  background-color: var(--color-bg);
+  background-color: var(--bg);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,7 +65,7 @@ body {
   font-family: 'sf-mono';
   font-weight: normal;
   font-style: normal;
-  color: var(--color-text);
+  color: var(--text);
   animation: pageFadeIn 220ms ease-out;
 }
 @keyframes pageFadeIn {
@@ -64,7 +88,7 @@ header {
 
   padding-top: 0.50rem;
   padding-bottom: 0.50rem;
-  background: var(--color-bg);
+  background: var(--bg);
   width: 100%;
 }
 /* Section: Nav bar */
@@ -90,7 +114,13 @@ nav {
 }
 .nav-links a {
   text-decoration: none;
-  color: var(--color-text);
+  color: var(--text);
+}
+.nav-links a.active {
+  color: var(--accent);
+}
+.nav-links a.active::before {
+  width: 100%;
 }
 .hover-bar {
   display: inline-block;
@@ -99,7 +129,7 @@ nav {
   text-decoration: none;
 }
 .hover-bar::before {
-  background-color: var(--color-accent);
+  background-color: var(--accent);
   bottom: 0;
   content: '';
   height: 0.15rem;
@@ -127,7 +157,7 @@ nav {
   display: block;
   width: 20px;
   height: 2px;
-  background: var(--color-text);
+  background: var(--text);
   margin: 4px 0;
   opacity: 0.8;
 }
@@ -135,8 +165,8 @@ nav {
   justify-self: end;
 
   text-decoration: none;
-  color: var(--color-bg);
-  background: var(--color-accent);
+  color: var(--bg);
+  background: var(--accent);
 
   font-size: 0.85rem;
   font-weight: 700;
@@ -152,7 +182,7 @@ nav {
 @media (max-width: 700px) {
   nav {
     grid-template-columns: auto 1fr auto;
-    width: 90%;
+    width: 100%;
   }
   .nav-toggle {
     display: block;
@@ -164,8 +194,8 @@ nav {
     left: 0;
     right: 0;
 
-    background: var(--color-bg);
-    border-bottom: 1px solid rgba(255,255,255,0.12);
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
 
     display: none;
     flex-direction: column;
@@ -178,13 +208,6 @@ nav {
     display: flex;
   }
 }
-.nav-links a.active {
-  color: var(--color-accent);
-}
-.nav-links a.active::before {
-  width: 100%;
-}
-
 /* =========================
    MAIN
 ========================= */
@@ -204,11 +227,11 @@ main {
 }
 .intro h1 {
   text-decoration: none;
-  color: var(--color-accent)
+  color: var(--accent);
 }
 .intro h2 {
   text-decoration: none;
-  opacity: 0.5;
+  color: var(--text-50);
   font-size: 1.3rem;
   font-weight: 100;
   font-style: italic;
@@ -218,34 +241,34 @@ main {
   animation: slideRightText 1s;
 }
 @keyframes slideRightText {
-    0% {
-        margin-left: -2rem;
-        opacity: 0;
-    }
-    25% {
-        opacity: 0;
-    }
-    100% {
-        margin-left: 0;
-        opacity: 1;
-    }
+  0% {
+    margin-left: -2rem;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0;
+    opacity: 1;
+  }
 }
 .intro-fade {
-    animation: fadeInText 2s;
+  animation: fadeInText 2s;
 }
 @keyframes fadeInText {
-    0% {
-        opacity: 0;
-    }
-    60% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0.5;
-    }
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .intro-bar {
-    animation: slideInBar 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  animation: slideInBar 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
 @keyframes slideInBar {
   from {
@@ -259,7 +282,7 @@ main {
 }
 /* Section: About Me */
 .about p {
-  opacity: 0.50;
+  color: var(--text-50);
 }
 .about-location {
   display: flex;
@@ -335,7 +358,7 @@ main {
   top: 48px;
   bottom: 0;
   width: 1px;
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--border);
 }
 .exp-item:last-child::before {
   display: none;
@@ -343,7 +366,6 @@ main {
 .exp-content {
   transition: transform 200ms ease;
 }
-
 .exp-item:hover .exp-content {
   transform: translateX(6px);
 }
@@ -355,13 +377,13 @@ main {
   display: grid;
   place-items: center;
 
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
 }
 .exp-marker img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
   border-radius: 50%;
 }
 .exp-org {
@@ -372,19 +394,19 @@ main {
 .exp-role {
   margin: 0.1rem 0 0.4rem;
   font-size: 0.85rem;
-  opacity: 0.7;
+  color: var(--text-70);
 }
 .exp-date {
   margin: 0 0 0.6rem;
   font-size: 0.75rem;
-  opacity: 0.45;
+  color: var(--text-45);
 }
 .exp-points {
   margin: 0;
   padding-left: 1.1rem;
   font-size: 0.82rem;
   line-height: 1.45;
-  opacity: 0.6;
+  color: var(--text-60);
 }
 /* Section: Projects */
 .project-list {
@@ -396,17 +418,17 @@ main {
   overflow: hidden;
   border-radius: 12px;
 
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-1);
+  border: 1px solid var(--border-soft);
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow-1);
 
   display: grid;
   grid-template-rows: auto 1fr;
 }
 .project-media {
-    aspect-ratio: 16/9;
-    overflow: hidden;
+  aspect-ratio: 16/9;
+  overflow: hidden;
 }
 .project-img {
   width: 100%;
@@ -415,7 +437,7 @@ main {
   transition: transform 300ms ease;
 }
 .project-item:hover .project-img {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 .project-text {
   padding: 1rem 1rem 1.1rem;
@@ -433,7 +455,7 @@ main {
 .project-text p {
   margin: 0;
   font-size: 0.80rem;
-  opacity: 0.35;
+  color: var(--text-35);
 }
 .project-tags {
   display: flex;
@@ -449,8 +471,8 @@ main {
   padding: 0.25rem 0.45rem;
 
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
 
   opacity: 0.85;
 }
@@ -467,7 +489,7 @@ main {
   text-decoration: none;
   font-size: 0.8rem;
   font-weight: 400;
-  color: var(--color-text);
+  color: var(--text);
   opacity: 0.35;
 
   transition: opacity 150ms ease;
@@ -489,7 +511,7 @@ main {
   margin: 0.5rem 0 1.25rem;
   max-width: 60ch;
   font-size: 0.9rem;
-  opacity: 0.5;
+  color: var(--text-50);
 }
 .tech-grid {
   display: grid;
@@ -504,8 +526,8 @@ main {
   padding: 0.85rem 0.9rem;
   border-radius: 12px;
 
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-1);
+  border: 1px solid var(--border-soft);
 }
 .tech-icon {
   width: 28px;
@@ -522,7 +544,7 @@ main {
 .tech-meta p {
   margin: 0.15rem 0 0;
   font-size: 0.75rem;
-  opacity: 0.45;
+  color: var(--text-45);
 }
 @media (max-width: 900px) {
   main { width: 90%; }
@@ -537,11 +559,11 @@ main {
 .projects-title {
   margin: 0;
   font-size: 2rem;
-  color: var(--color-accent);
+  color: var(--accent);
 }
 .projects-subtitle {
   margin: 0.5rem 0 2rem;
-  opacity: 0.5;
+  color: var(--text-50);
   font-size: 0.95rem;
 }
 .projects-stack {
@@ -552,9 +574,9 @@ main {
   overflow: hidden;
   border-radius: 12px;
 
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  background: var(--surface-1);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-1);
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -588,7 +610,7 @@ main {
 .project-wide-desc {
   margin: 0;
   font-size: 0.9rem;
-  opacity: 0.45;
+  color: var(--text-45);
   line-height: 1.5;
 }
 .project-wide-tags {
@@ -605,8 +627,8 @@ main {
   padding: 0.25rem 0.45rem;
 
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   opacity: 0.85;
 }
 .project-wide-actions {
@@ -620,8 +642,8 @@ main {
   gap: 0.4rem;
 
   text-decoration: none;
-  color: var(--color-bg);
-  background: var(--color-accent);
+  color: var(--bg);
+  background: var(--accent);
 
   font-size: 0.85rem;
   font-weight: 700;
@@ -647,8 +669,8 @@ main {
 ========================= */
 .resume-download {
   text-decoration: none;
-  color: var(--color-bg);
-  background: var(--color-accent);
+  color: var(--bg);
+  background: var(--accent);
   font-size: 0.85rem;
   font-weight: 700;
   padding: 0.55rem 0.85rem;
@@ -662,9 +684,9 @@ main {
 .resume-viewer {
   border-radius: 12px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  background: var(--surface-1);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-1);
   height: 78vh;
 }
 .resume-viewer embed {
@@ -687,9 +709,9 @@ main {
 }
 .contact-form {
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  background: var(--surface-1);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-1);
   padding: 1.25rem;
 
   display: flex;
@@ -702,15 +724,15 @@ main {
 }
 .contact-row label {
   font-size: 0.8rem;
-  opacity: 0.75;
+  color: var(--text-75);
 }
 .contact-row input,
 .contact-row textarea {
   font-family: inherit;
-  color: var(--color-text);
+  color: var(--text);
 
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--surface-1);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 0.75rem 0.9rem;
   outline: none;
@@ -723,7 +745,7 @@ main {
 }
 .contact-row input:focus,
 .contact-row textarea:focus {
-  border-color: rgba(214, 186, 124, 0.8);
+  border-color: var(--accent-80);
 }
 .contact-submit {
   align-self: flex-start;
@@ -733,8 +755,8 @@ main {
   font-size: 0.85rem;
   font-weight: 700;
 
-  color: var(--color-bg);
-  background: var(--color-accent);
+  color: var(--bg);
+  background: var(--accent);
   border: none;
   border-radius: 10px;
   padding: 0.65rem 1rem;
@@ -746,7 +768,7 @@ main {
 }
 .contact-powered {
   margin: 0.25rem 0 0;
-  opacity: 0.45;
+  color: var(--text-45);
   font-size: 0.75rem;
 }
 .contact-email {
@@ -760,7 +782,7 @@ main {
   align-items: center;
   gap: 0.45rem;
   font-size: 0.85rem;
-  opacity: 0.75;
+  color: var(--text-75);
 }
 .icon-email {
   display: inline-flex;
@@ -772,9 +794,9 @@ main {
   align-items: center;
   justify-content: center;
 
-  color: var(--color-text);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 0.35rem 0.5rem;
   cursor: pointer;
@@ -808,7 +830,7 @@ main {
 }
 .success p {
   font-size: 0.9rem;
-  opacity: 0.6;
+  color: var(--text-60);
 }
 /* =========================
    PAGE: 404 ERROR
@@ -824,29 +846,28 @@ main {
 .error-face {
   font-size: 4rem;
   font-weight: 700;
-  opacity: 0.5;
+  color: var(--text-50);
   margin-bottom: 0.5rem;
 }
 .error-code {
   margin: 0;
   font-size: 3rem;
-  opacity: 0.7;
+  color: var(--text-70);
 }
 .error-text {
   margin: 0.25rem 0 0;
   font-size: 1rem;
-  opacity: 0.6;
+  color: var(--text-60);
 }
 .error-subtext {
   margin: 0.5rem 0 1.5rem;
   font-size: 0.8rem;
-  opacity: 0.4;
+  color: var(--text-45);
   max-width: 40ch;
 }
 .error-cta {
   margin-top: 0.5rem;
 }
-
 /* =========================
    FOOTER
 ========================= */
@@ -854,8 +875,8 @@ footer {
   margin-top: 8rem;
   padding: 1rem 0;
   width: 100%;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid var(--border);
   text-align: center;
   font-size: 0.75rem;
-  opacity: 0.6;
+  color: var(--text-60);
 }
