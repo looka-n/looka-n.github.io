@@ -677,6 +677,7 @@ main {
   border-radius: 10px;
   transition: opacity 150ms ease, transform 150ms ease;
   white-space: nowrap;
+  margin-top: 1rem;
 }
 .resume-download:hover {
   opacity: 0.9;
