@@ -178,6 +178,12 @@ nav {
     display: flex;
   }
 }
+.nav-links a.active {
+  color: var(--color-accent);
+}
+.nav-links a.active::before {
+  width: 100%;
+}
 
 /* =========================
    MAIN
