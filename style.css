@@ -152,10 +152,11 @@ nav {
 @media (max-width: 700px) {
   nav {
     grid-template-columns: auto 1fr auto;
+    width: 100%;
   }
   .nav-toggle {
     display: block;
-    justify-self: end;
+    justify-self: center;
   }
   .nav-links {
     position: absolute;
